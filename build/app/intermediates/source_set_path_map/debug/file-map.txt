@@ -1,0 +1,12 @@
+com.example.ralm.app-debug-0 A:\Flutter\ralm\android\app\src\debug\res
+com.example.ralm.app-main-1 A:\Flutter\ralm\android\app\src\main\res
+com.example.ralm.app-pngs-2 A:\Flutter\ralm\build\app\generated\res\pngs\debug
+com.example.ralm.app-resValues-3 A:\Flutter\ralm\build\app\generated\res\resValues\debug
+com.example.ralm.app-rs-4 A:\Flutter\ralm\build\app\generated\res\rs\debug
+com.example.ralm.app-mergeDebugResources-5 A:\Flutter\ralm\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.ralm.app-mergeDebugResources-6 A:\Flutter\ralm\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.ralm.app-merged_res-7 A:\Flutter\ralm\build\app\intermediates\merged_res\debug
+com.example.ralm.app-jetified-window-java-1.0.0-beta04-8 C:\Users\mikhael hosea\.gradle\caches\transforms-3\006d93cd422dbc43e89591147c2de572\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.ralm.app-core-1.6.0-9 C:\Users\mikhael hosea\.gradle\caches\transforms-3\4ca28c4a71705f8a687c69dda140a277\transformed\core-1.6.0\res
+com.example.ralm.app-jetified-annotation-experimental-1.1.0-10 C:\Users\mikhael hosea\.gradle\caches\transforms-3\8965c941cf4bee4d72541b965c7c9d39\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.ralm.app-jetified-window-1.0.0-beta04-11 C:\Users\mikhael hosea\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\res
