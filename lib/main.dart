@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'RALM',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Kuisioner'),
     );
   }
 }
@@ -49,7 +49,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-
+  String? gender;
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -71,45 +71,194 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
+        automaticallyImplyLeading: true,
+        actions: [],
+        centerTitle: true,
+        elevation: 4,
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+      body: SafeArea(
+        child: GestureDetector(
+          onTap: () => {},
+          child: Align(
+            alignment: AlignmentDirectional(0, 0),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Align(
+                      alignment: AlignmentDirectional(0, 0),
+                      child: Text(
+                        '1 of 5',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontFamily: "Poppins", fontSize: 20),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                      child: Text(
+                        'Have you experienced thoughts of death or suicide during your low periods?',
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontSize: 12, fontFamily: "Poppins"),
+                      ),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(0.55, 0.15),
+                      child: Container(
+                        width: 396.1,
+                        height: 702.3,
+                        decoration: BoxDecoration(),
+                        alignment: AlignmentDirectional(
+                            0.19999999999999996, 0.44999999999999996),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(-0.95, -0.95),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Align(
+                                          alignment:
+                                              AlignmentDirectional(-0.9, -0.85),
+                                          child: Column(
+                                            children: [
+                                              RadioListTile(
+                                                title: Text("Not At All"),
+                                                value: "not",
+                                                groupValue: gender,
+                                                onChanged: (value) {
+                                                  setState(() {
+                                                    gender = value.toString();
+                                                  });
+                                                },
+                                              ),
+                                              RadioListTile(
+                                                title: Text("Several Days"),
+                                                value: "several",
+                                                groupValue: gender,
+                                                onChanged: (value) {
+                                                  setState(() {
+                                                    gender = value.toString();
+                                                  });
+                                                },
+                                              ),
+                                              RadioListTile(
+                                                title: Text(
+                                                    "More Than Half The Days"),
+                                                value: "more",
+                                                groupValue: gender,
+                                                onChanged: (value) {
+                                                  setState(() {
+                                                    gender = value.toString();
+                                                  });
+                                                },
+                                              ),
+                                              RadioListTile(
+                                                title: Text("Nearly Every Day"),
+                                                value: "nearly",
+                                                groupValue: gender,
+                                                onChanged: (value) {
+                                                  setState(() {
+                                                    gender = value.toString();
+                                                  });
+                                                },
+                                              ),
+                                            ],
+                                          )
+
+                                          // FlutterFlowRadioButton(
+                                          //   options: [
+                                          //     'Not At All',
+                                          //     'Several Days',
+                                          //     'More Than Half Days',
+                                          //     'Nearly Every Day'
+                                          //   ].toList(),
+                                          //   onChanged: (val) => setState(() =>
+                                          //       _model.radioButtonValue = val),
+                                          //   optionHeight: 40,
+                                          //   textStyle:
+                                          //       FlutterFlowTheme.of(context)
+                                          //           .bodyText1
+                                          //           .override(
+                                          //             fontFamily: 'Poppins',
+                                          //             color: Colors.black,
+                                          //           ),
+                                          //   buttonPosition:
+                                          //       RadioButtonPosition.right,
+                                          //   direction: Axis.vertical,
+                                          //   radioButtonColor: Colors.blue,
+                                          //   inactiveRadioButtonColor:
+                                          //       Color(0x8A000000),
+                                          //   toggleable: false,
+                                          //   horizontalAlignment:
+                                          //       WrapAlignment.start,
+                                          //   verticalAlignment:
+                                          //       WrapCrossAlignment.start,
+                                          // ),
+                                          ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Expanded(
+                              child: Align(
+                                alignment: AlignmentDirectional(0.25, 0.2),
+                                child: Container(
+                                  width: 401.6,
+                                  height: 551.1,
+                                  decoration: BoxDecoration(),
+                                  child: Align(
+                                    alignment: AlignmentDirectional(-0.9, -0.5),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          10, 10, 10, 10),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Align(
+                                              alignment:
+                                                  AlignmentDirectional(0, -0.6),
+                                              child: TextButton(
+                                                style: TextButton.styleFrom(
+                                                    textStyle: const TextStyle(
+                                                        backgroundColor:
+                                                            Colors.purple,
+                                                        color: Colors.black)),
+                                                onPressed: () {},
+                                                child: Text('Continue'),
+                                              )),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+          ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
