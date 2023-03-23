@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "121634524885",
+    "project_id": "ralm-fc1fd",
+    "storage_bucket": "ralm-fc1fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121634524885:android:a173798e9de1e4a7645c5c",
+        "android_client_info": {
+          "package_name": "com.example.ralm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121634524885-2p7dm70vqvjuesv5r2hradjtc20vljfd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJfv2EbFI06RONzEkKrtNlxe2ygH6B8u4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "121634524885-2p7dm70vqvjuesv5r2hradjtc20vljfd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

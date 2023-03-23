@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "_flutterfire_internals",
+      "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.0.18",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
       "name": "args",
       "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/args-2.4.0",
       "packageUri": "lib/",
@@ -90,6 +96,42 @@
       "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/file-6.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "firebase_auth",
+      "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/firebase_auth-4.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_auth_platform_interface",
+      "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-6.12.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_auth_web",
+      "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.2.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core",
+      "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/firebase_core-2.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core_platform_interface",
+      "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/firebase_core_platform_interface-4.5.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "firebase_core_web",
+      "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/firebase_core_web-2.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "flutter",
@@ -548,7 +590,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-03-16T06:55:53.168393Z",
+  "generated": "2023-03-23T07:59:15.835734Z",
   "generator": "pub",
   "generatorVersion": "2.19.4"
 }
