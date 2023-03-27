@@ -88,7 +88,7 @@ class SignUpPage extends State<SignUp> {
 
     final registerButton = Material(
       elevation: 5.0,
-      borderRadius: BorderRadius.circular(30.0),
+      borderRadius: BorderRadius.circular(10.0),
       color: Color(0xffa25cd9),
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
@@ -107,11 +107,13 @@ class SignUpPage extends State<SignUp> {
                       content: Text("Email Already In Use!"),
                     );
                   });
+            } else {
+              Navigator.pushNamed(context, "/kuisioner");
             }
           }
         },
         child: Text(
-          "Register",
+          "Sign Up",
           style: TextStyle(color: Colors.white),
           textAlign: TextAlign.center,
         ),
@@ -204,7 +206,7 @@ class SignUpPage extends State<SignUp> {
                   autovalidateMode: AutovalidateMode.always,
                   key: _formKey,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       emailField,
                       // Text(
@@ -266,23 +268,65 @@ class SignUpPage extends State<SignUp> {
                       // ),
                       passwordField,
                       SizedBox(height: 20),
-                      // Container(
-                      //   width: double.infinity,
-                      //   child: ElevatedButton(
-                      //     onPressed: () {},
-                      //     child: Text(
-                      //       'Sign Up',
-                      //       style: TextStyle(color: Colors.white),
-                      //     ),
-                      //     style: ElevatedButton.styleFrom(
-                      //       backgroundColor: Color(0xffa25cd9),
-                      //       shape: RoundedRectangleBorder(
-                      //           borderRadius: BorderRadius.circular(10)),
-                      //       padding: EdgeInsets.symmetric(vertical: 16),
-                      //     ),
-                      //   ),
-                      // ),
-                      registerButton
+                      registerButton,
+                      SizedBox(height: 20),
+                      Container(
+                        // donthaveaccountsignupdcZ (44:829)
+                        margin: EdgeInsets.fromLTRB(
+                            9 * fem, 0 * fem, 0 * fem, 21 * fem),
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.of(context, rootNavigator: true)
+                                .pushNamed("/login");
+                          },
+                          style: TextButton.styleFrom(
+                            padding: EdgeInsets.zero,
+                          ),
+                          child: RichText(
+                            text: TextSpan(
+                              style: SafeGoogleFont(
+                                'Poppins',
+                                fontSize: 12 * ffem,
+                                fontWeight: FontWeight.w500,
+                                height: 1.5 * ffem / fem,
+                                color: Color(0xff000000),
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: 'You have Account?',
+                                  style: SafeGoogleFont(
+                                    'Poppins',
+                                    fontSize: 12 * ffem,
+                                    fontWeight: FontWeight.w400,
+                                    height: 1.5 * ffem / fem,
+                                    color: Color(0xff000000),
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: ' ',
+                                  style: SafeGoogleFont(
+                                    'Poppins',
+                                    fontSize: 12 * ffem,
+                                    fontWeight: FontWeight.w500,
+                                    height: 1.5 * ffem / fem,
+                                    color: Color(0xff000000),
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: 'Sign in',
+                                  style: SafeGoogleFont(
+                                    'Poppins',
+                                    fontSize: 12 * ffem,
+                                    fontWeight: FontWeight.w700,
+                                    height: 1.5 * ffem / fem,
+                                    color: Color(0xffa25cd9),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -326,7 +370,7 @@ class SignUpPage extends State<SignUp> {
                               width: 8,
                             ),
                             Text(
-                              'Login With Google',
+                              'Sign Up With Google',
                               style: TextStyle(color: Color(0xffa25cd9)),
                             ),
                           ]),

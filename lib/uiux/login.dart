@@ -3,9 +3,12 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ralm/auth/loginuser.dart';
+import 'package:ralm/uiux/signup.dart';
 import 'package:ralm/utils.dart';
 import 'package:ralm/auth/auth.dart';
 import 'package:ralm/uiux/home-page.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Login extends StatefulWidget {
   final Function? toggleView;
@@ -89,11 +92,12 @@ class _Login extends State<Login> {
                     return AlertDialog(
                         content: Text("Email and Password is Wrong"));
                   });
+            } else {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Home()),
+              );
             }
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Home()),
-            );
           }
         },
         child: Text(
@@ -103,6 +107,17 @@ class _Login extends State<Login> {
         ),
       ),
     );
+    var firebaseUser = FirebaseAuth.instance.currentUser;
+    final firestoreInstance = FirebaseFirestore.instance;
+    firestoreInstance
+        .collection("kuisioner")
+        .doc(firebaseUser?.uid)
+        .get()
+        .then((value) {
+      if (!value.exists) {
+        Navigator.pushNamed(context, "/kuisioner");
+      }
+    });
     double baseWidth = 375;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
@@ -204,7 +219,10 @@ class _Login extends State<Login> {
                   margin:
                       EdgeInsets.fromLTRB(9 * fem, 0 * fem, 0 * fem, 21 * fem),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context, rootNavigator: true)
+                          .pushNamed("/signup");
+                    },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
                     ),
@@ -239,7 +257,7 @@ class _Login extends State<Login> {
                             ),
                           ),
                           TextSpan(
-                            text: 'SignUp',
+                            text: 'Sign up',
                             style: SafeGoogleFont(
                               'Poppins',
                               fontSize: 12 * ffem,

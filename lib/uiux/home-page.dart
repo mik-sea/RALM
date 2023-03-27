@@ -1,12 +1,15 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ralm/auth/firebaseuser.dart';
 import 'package:ralm/utils.dart';
-// import 'package:myapp/uiux/chat.dart';
+import 'package:ralm/auth/auth.dart';
 
 class Home extends StatefulWidget {
-  // const Home({Key key}) : super(key: key);
+  // final user = FirebaseAuth.instance.currentUser;
+  // Home({super.key, this.user});
 
   @override
   HomePage createState() => HomePage();
@@ -22,6 +25,29 @@ class HomePage extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      Navigator.of(context, rootNavigator: true).pushNamed("/login");
+    }
+    final String? email = user?.email;
+    final AuthService _auth = AuthService();
+    final SignOut = Material(
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(30.0),
+      color: Theme.of(context).primaryColor,
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        onPressed: () async {
+          await _auth.signOut();
+        },
+        child: Text(
+          "Log out",
+          style: TextStyle(color: Theme.of(context).primaryColorLight),
+          textAlign: TextAlign.center,
+        ),
+      ),
+    );
     double baseWidth = 375;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
@@ -158,7 +184,7 @@ class HomePage extends State<Home> {
                   margin:
                       EdgeInsets.fromLTRB(20 * fem, 0 * fem, 0 * fem, 22 * fem),
                   child: DefaultTextStyle(
-                    child: Text('Hi, Juan'),
+                    child: Text('Hi, $email'),
                     style: SafeGoogleFont(
                       'Poppins',
                       fontSize: 20 * ffem,
@@ -176,7 +202,7 @@ class HomePage extends State<Home> {
                     child: Text('Daily Journal'),
                     style: SafeGoogleFont(
                       'Poppins',
-                      fontSize: 16 * ffem,
+                      fontSize: 20 * ffem,
                       fontWeight: FontWeight.w600,
                       height: 1.5 * ffem / fem,
                       color: Color(0xff000000),
@@ -253,10 +279,10 @@ class HomePage extends State<Home> {
                                           ),
                                           child: Center(
                                             child: Text(
-                                              'Click here to get started',
+                                              'Get started!',
                                               style: SafeGoogleFont(
                                                 'Poppins',
-                                                fontSize: 7 * ffem,
+                                                fontSize: 12 * ffem,
                                                 fontWeight: FontWeight.w500,
                                                 height: 1.5 * ffem / fem,
                                                 color: Color(0xffffffff),
@@ -302,7 +328,10 @@ class HomePage extends State<Home> {
                       ),
                       TextButton(
                         // frame26sGq (61:2076)
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context, rootNavigator: true)
+                              .pushNamed("/chat");
+                        },
                         style: TextButton.styleFrom(
                           padding: EdgeInsets.zero,
                         ),
@@ -348,7 +377,7 @@ class HomePage extends State<Home> {
                                         'Find out if the person you want to chat with is experiencing the same mental health issues as you, we make sure to keep your personal information private.',
                                         style: SafeGoogleFont(
                                           'Poppins',
-                                          fontSize: 7 * ffem,
+                                          fontSize: 10 * ffem,
                                           fontWeight: FontWeight.w400,
                                           height: 1.5 * ffem / fem,
                                           color: Color(0xff999999),
@@ -396,7 +425,7 @@ class HomePage extends State<Home> {
                             padding: EdgeInsets.fromLTRB(
                                 22 * fem, 10.98 * fem, 0 * fem, 16.2 * fem),
                             width: 335 * fem,
-                            height: 119 * fem,
+                            height: 150 * fem,
                             decoration: BoxDecoration(
                               color: Color(0x1ccb8aff),
                               borderRadius: BorderRadius.circular(15 * fem),
@@ -433,13 +462,13 @@ class HomePage extends State<Home> {
                                         margin: EdgeInsets.fromLTRB(
                                             3 * fem, 0 * fem, 0 * fem, 0 * fem),
                                         constraints: BoxConstraints(
-                                          maxWidth: 133 * fem,
+                                          maxWidth: 156 * fem,
                                         ),
                                         child: Text(
                                           'organize your medication schedule to make it more regular.',
                                           style: SafeGoogleFont(
                                             'Poppins',
-                                            fontSize: 7 * ffem,
+                                            fontSize: 10 * ffem,
                                             fontWeight: FontWeight.w400,
                                             height: 1.5 * ffem / fem,
                                             color: Color(0xff999999),

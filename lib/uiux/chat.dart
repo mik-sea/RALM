@@ -10,7 +10,9 @@ class Chat extends StatelessWidget {
     double baseWidth = 375;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return Container(
+    return SingleChildScrollView(
+      child:
+    Container(
       width: double.infinity,
       child: Container(
         // chatguT (48:205)
@@ -95,7 +97,10 @@ class Chat extends StatelessWidget {
                         ),
                         TextButton(
                           // friends4qT (48:221)
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context, rootNavigator: true)
+                                .pushNamed("/friends");
+                          },
                           style: TextButton.styleFrom(
                             padding: EdgeInsets.zero,
                           ),
@@ -959,6 +964,7 @@ class Chat extends StatelessWidget {
           ],
         ),
       ),
+    ),
     );
   }
 }

@@ -62,6 +62,24 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "cloud_firestore",
+      "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/cloud_firestore-4.4.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "cloud_firestore_platform_interface",
+      "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/cloud_firestore_platform_interface-5.11.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
+      "name": "cloud_firestore_web",
+      "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/cloud_firestore_web-3.3.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    },
+    {
       "name": "collection",
       "rootUri": "file:///C:/Users/mikhael%20hosea/AppData/Roaming/Pub/Cache/hosted/pub.dev/collection-1.17.0",
       "packageUri": "lib/",
@@ -590,7 +608,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-03-23T07:59:15.835734Z",
+  "generated": "2023-03-26T13:48:24.348173Z",
   "generator": "pub",
-  "generatorVersion": "2.19.4"
+  "generatorVersion": "2.19.5"
 }
