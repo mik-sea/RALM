@@ -5,6 +5,8 @@ The app is easy to use and designed with a user-friendly interface, making it ac
 
 The app offers various mental health services, we used the technologies that are provided and enhanced by Google, such as Flutter and Firebase.
 
+
+https://github.com/mik-sea/RALM/issues/2#issue-1648663240
 # Overview
 
 The mental-health mobile application "Tellissue" is designed to provide a unique feature that allows the user who has mental health problems to chat with individuals who have similar mental health issues.
