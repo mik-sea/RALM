@@ -1,16 +1,23 @@
-# ralm
+# Tellissue's mobile-application  
 
-A new Flutter project.
+We built our app with the latest technologies to ensure user experience
+The app is easy to use and designed with a user-friendly interface, making it accessible to individuals of all ages and technological abilities.
 
-## Getting Started
+The app offers various mental health services, we used the technologies that are provided and enhanced by Google, such as Flutter and Firebase.
 
-This project is a starting point for a Flutter application.
+# Overview
 
-A few resources to get you started if this is your first Flutter project:
+The mental-health mobile application "Tellissue" is designed to provide a unique feature that allows the user who has mental health problems to chat with individuals who have similar mental health issues.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The app offers a safe and supportive environment for users to share their experiences anonymously, thoughts, and feelings with others who can understand their struggles. That aims to decrease the insecurity and honestly tells about their mental-health problem together.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Through Tellissue, users can connect with individuals who have similar mental health issues, to tell about their stories and problems together, to gives the same vibes and empathy to each other. also includes access to licensed mental health professionals for consultations and therapy sessions. 
+
+
+# Features
+
+ - Chat anonimously peer to peer with same mental-health issues
+ - Mood Tracker
+ - Mood Journal
+ - Medicine Reminder
+ - Access to licensed mental health professionals (consultations/meditation sessions) 
