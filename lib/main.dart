@@ -44,6 +44,7 @@ void main() async {
       '/homepage': (BuildContext context) => Home(),
       '/chat': (BuildContext context) => Chat(),
       '/friends': (BuildContext context) => Friends(),
+      // '/chatting': (BuildContext context) => ChatScreen(),
     },
   ));
 }

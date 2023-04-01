@@ -53,6 +53,7 @@ dependencies:
   google_fonts: ^3.0.1
   firebase_auth: ^4.3.0
   cloud_firestore: ^4.4.5
+  flutter_launcher_icons: ^0.12.0
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +68,12 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+
+# flutter icons
+flutter_icons:
+  android: "launcher_icon"
+  ios: "true"
+  image_path: "assets/uiux/images/tellissuehd.png"
 
 # The following section is specific to Flutter packages.
 flutter:

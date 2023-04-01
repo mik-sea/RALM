@@ -110,7 +110,7 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
       "pilihan": pilihan,
       "created_at": timestamp,
     }).then((_) {
-      print("Success");
+      Navigator.pushNamed(context, "/homepage");
     });
   }
 
